@@ -1,0 +1,373 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-gray-100;
+}
+
+main {
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+.section {
+  @apply m-5 rounded-lg shadow-lg bg-white;
+}
+
+#quotes-side-by-side {
+  @apply flex m-5 rounded-lg shadow-lg;
+
+  .quote {
+    @apply m-3 p-6 bg-blue-100 rounded-lg;
+
+    p {
+      @apply font-serif italic text-lg text-gray-700 leading-snug mb-1;
+    }
+
+    span {
+      @apply text-sm text-gray-500;
+    }
+  }
+}
+
+#tabs-spaced-out {
+  @apply font-sans bg-purple-200 p-12 text-center rounded-lg;
+
+  .menu {
+    @apply flex justify-between bg-white p-2 rounded-full;
+
+    a {
+      @apply bg-blue-50 text-gray-800 py-2 px-6 rounded-full;
+    }
+  }
+
+  a.active,
+  a:hover {
+    @apply bg-blue-500 text-white;
+  }
+}
+
+#justify-content {
+  @apply font-sans bg-purple-200 p-12;
+
+  .menu {
+    @apply bg-white p-2 rounded-full mb-7;
+  }
+
+  a {
+    @apply bg-blue-50 text-gray-800 py-2 px-6 rounded-full;
+  }
+
+  a.active,
+  a:hover {
+    @apply bg-blue-500 text-white;
+  }
+
+  h3 {
+    @apply font-bold mb-3 font-mono;
+  }
+}
+
+#card-with-links {
+  @apply p-6;
+
+  .card {
+    margin: 0 auto;
+    @apply bg-white p-9 max-w-xs rounded-lg m-8 shadow-lg;
+
+    h3 {
+      @apply font-bold text-3xl text-blue-600;
+    }
+
+    p {
+      @apply mt-4;
+    }
+
+    .card-links {
+      @apply mt-4;
+
+      a {
+        @apply px-4 py-2 bg-blue-200 rounded-md text-gray-900 text-sm;
+      }
+    }
+  }
+}
+
+#team-profiles {
+  .card {
+    @apply w-auto max-w-none m-14;
+  }
+
+  .profile {
+    @apply text-center px-6 py-4;
+
+    img {
+      @apply w-32 h-32 object-cover rounded-full object-top;
+    }
+
+    h3 {
+      @apply font-bold text-xl;
+    }
+
+    span {
+      @apply text-sm text-gray-600;
+    }
+  }
+}
+
+#logos-wrapped {
+  @apply p-5;
+
+  h2 {
+    @apply font-bold text-3xl text-center;
+  }
+
+  .logos {
+    @apply mt-6;
+  }
+
+  .logos img {
+    @apply h-12 mx-4 mb-2;
+  }
+}
+
+#icon-and-text {
+  @apply p-5 flex justify-center;
+
+  .icon-wrap {
+    @apply p-3 shadow-xl rounded-xl;
+  }
+
+  .icon {
+    @apply inline-block mr-3 p-2 bg-pink-600 text-white rounded;
+  }
+
+  .icon-text {
+    @apply font-bold text-lg;
+  }
+}
+
+#align-items-examples {
+  @apply flex p-5 justify-between;
+
+  .icon-wrap {
+    @apply flex m-12;
+
+    .icon {
+      @apply inline-block p-3 bg-pink-600 text-white rounded;
+    }
+
+    .icon-text {
+      @apply text-sm border border-gray-400 px-3;
+    }
+  }
+}
+
+#profile-card-small {
+  @apply flex justify-center p-6;
+
+  .card {
+    @apply flex items-center p-5 shadow-lg rounded-lg;
+  }
+
+  img {
+    @apply w-20 h-20 object-cover rounded-full mr-4;
+  }
+
+  h3 {
+    @apply font-bold text-xl;
+  }
+}
+
+#services {
+  @apply flex justify-center p-5;
+
+  .service {
+    @apply max-w-xs mx-5 px-8 py-10 bg-white rounded-lg shadow-md text-center;
+
+    span {
+      @apply inline-block p-4 rounded-full bg-teal-600 text-white;
+    }
+
+    h3 {
+      @apply mt-4 font-bold text-2xl;
+    }
+
+    p {
+      @apply mt-4;
+    }
+  }
+}
+
+#frequent-questions {
+  @apply p-5;
+
+  .questions-card {
+    @apply shadow-xl rounded-lg max-w-lg w-auto my-auto mx-auto p-3;
+
+    h2 {
+      @apply font-bold text-3xl text-gray-800 mb-10 text-center;
+
+      span {
+        @apply text-red-600;
+      }
+    }
+
+    .question {
+      @apply flex items-start mb-6;
+
+      h3 {
+        @apply font-bold text-lg text-gray-800;
+      }
+
+      span {
+        @apply block bg-red-600 text-white font-bold text-xl py-1 px-3 rounded mr-4;
+      }
+
+      p {
+        @apply mt-1;
+      }
+    }
+  }
+}
+
+#full-size-container {
+  @apply shadow-lg rounded-lg p-5 bg-cyan-200 m-5 w-auto h-screen flex justify-center items-center;
+
+  h2 {
+    @apply text-white font-bold text-2xl;
+  }
+}
+
+.full-width-container {
+  @apply shadow-lg rounded-lg p-5 m-5 w-auto h-screen flex justify-center items-center;
+
+  .login-form {
+    @apply shadow-xl rounded-md p-10 h-100 w-100 flex flex-col justify-center items-center gap-5;
+
+    a {
+      @apply rounded-md border border-blue-300 py-3 w-80 text-center;
+    }
+
+    a:hover {
+      @apply bg-blue-400;
+    }
+
+    .btn-blue {
+      @apply bg-blue-400 text-white;
+    }
+  }
+}
+
+#testimonial-card {
+  @apply h-auto;
+
+  .card {
+    @apply w-72 h-80 p-8 rounded-xl shadow-lg flex flex-col justify-between items-start;
+
+    img {
+      @apply h-10;
+    }
+
+    span {
+      @apply font-bold text-lg;
+    }
+  }
+}
+
+#alternate-list-of-profiles {
+  @apply h-auto;
+
+  .profiles-container {
+    @apply shadow-lg rounded-lg p-10 w-200;
+  }
+
+  .profile {
+    @apply flex items-center even:flex-row-reverse even:text-right;
+
+    img {
+      @apply h-36 m-5 object-cover;
+      min-width: 9rem;
+    }
+
+    h3 {
+      @apply font-bold text-xl;
+    }
+
+    .role {
+      @apply text-sm text-gray-500;
+    }
+
+    .desc {
+      @apply mt-3 leading-snug;
+    }
+  }
+}
+
+#inline-subscribe-form {
+  @apply h-auto;
+
+  .form-container {
+    @apply w-full flex rounded-lg bg-teal-100 p-10;
+  }
+
+  input[type="email"] {
+    @apply py-3 px-6 rounded-l-md border border-gray-400 grow bg-white;
+  }
+
+  button {
+    @apply py-3 px-6 rounded-r-md bg-teal-700 text-white;
+  }
+}
+
+#sticky-footer {
+  @apply shadow-lg rounded-lg p-5 m-5 w-auto min-h-screen flex flex-col;
+
+  .main {
+    @apply grow p-8 rounded-t-lg shadow-lg;
+
+    h2 {
+      @apply font-bold text-4xl;
+    }
+
+    p {
+      @apply mt-4;
+    }
+  }
+
+  footer {
+    @apply py-6 px-8 bg-blue-100 rounded-b-lg shadow-lg;
+  }
+}
+
+#card-with-header-and-footer {
+  @apply rounded-xl shadow-xl w-100 m-auto p-5 h-100 mb-5 flex flex-col;
+
+  h3 {
+    @apply font-bold text-2xl mb-5;
+  }
+
+  p {
+    @apply grow;
+  }
+
+  a {
+    @apply bg-teal-800 text-white p-2 rounded-lg text-center;
+  }
+}
+
+#tabs-hover-effect {
+  @apply m-5 rounded-lg shadow-lg w-auto flex justify-center p-5;
+
+  .navbar {
+    @apply rounded-sm shadow-lg w-full h-20 flex items-center;
+  }
+
+  .navbar ul {
+    @apply mx-auto flex grow;
+  }
+
+  .navbar ul li {
+    @apply grow text-center cursor-pointer hover:grow-3 
+    transition-all duration-200 hover:border-green-400;
+  }
+}
