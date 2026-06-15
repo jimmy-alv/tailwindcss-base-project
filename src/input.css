@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-gray-100;
+  @apply bg-white;
 }
 
 main {
@@ -147,7 +147,7 @@ main {
 }
 
 #align-items-examples {
-  @apply flex p-5 justify-between;
+  @apply flex p-5 justify-around flex-wrap;
 
   .icon-wrap {
     @apply flex m-12;
@@ -369,5 +369,114 @@ main {
   .navbar ul li {
     @apply grow text-center cursor-pointer hover:grow-3 
     transition-all duration-200 hover:border-green-400;
+  }
+}
+
+#resposive-buttons {
+  @apply rounded-xl shadow-xl p-5 flex flex-wrap mt-5 gap-5 max-w-3xl mx-auto;
+
+  button {
+    @apply grow bg-blue-700 text-white text-center rounded-md p-3;
+  }
+
+  button:last-child {
+    @apply grow-2;
+  }
+}
+
+#itinerary {
+  @apply shadow-lg rounded-lg p-5 m-5 w-auto flex justify-center items-center;
+  .card {
+    @apply flex rounded-xl shadow-xl p-5 gap-10 flex-col w-full md:w-3/4 lg:w-1/2;
+
+    .visit {
+      @apply flex items-start gap-3;
+
+      .content {
+        @apply flex flex-col gap-3;
+
+        h3 {
+          @apply text-2xl font-bold;
+        }
+      }
+
+      .time {
+        @apply bg-red-400 text-white rounded-full shrink-0
+        p-1.5;
+      }
+    }
+  }
+}
+#profile-card-large {
+  @apply p-5 bg-gray-50;
+  .card {
+    @apply bg-white flex items-center mx-auto gap-5 shadow-2xl rounded-lg w-3/4 p-5;
+    img {
+      @apply shrink-0 w-20 h-20 object-cover rounded-full;
+    }
+
+    div h3 {
+      @apply text-2xl font-bold;
+    }
+  }
+}
+
+#split-screen-display {
+  @apply max-w-none w-full h-screen flex flex-col md:flex-row rounded-lg;
+
+  .left-top {
+    @apply bg-orange-200 basis-1/2;
+  }
+
+  .right-bottom {
+    @apply bg-blue-200 basis-1/2;
+  }
+
+  .split {
+    @apply flex flex-col items-center justify-center gap-3;
+    h2 {
+      @apply text-4xl font-bold;
+    }
+
+    a {
+      @apply rounded-lg p-3 bg-white hover:shadow-lg hover:border;
+    }
+  }
+}
+
+#blog-post-display {
+  @apply p-10 flex items-center justify-center bg-gray-50;
+
+  .content {
+    @apply flex items-center gap-5 shadow-lg rounded-lg bg-white p-5;
+
+    img {
+      @apply shrink-0 rounded-lg w-15 h-15;
+    }
+    h2 {
+      @apply text-2xl font-bold;
+    }
+  }
+}
+
+#pricing-plans {
+  @apply flex flex-col md:flex-row justify-between p-5 bg-red-50 gap-8;
+
+  .plan {
+    @apply bg-white rounded-lg
+    hover:shadow-lg flex grow shrink flex-col even:bg-pink-700 
+    even:text-white p-5;
+
+    h3 {
+      @apply text-2xl font-bold;
+    }
+
+    p {
+      @apply text-sm;
+    }
+
+    .price {
+      @apply text-5xl font-bold mt-5;
+    }
   }
 }
